@@ -1,1 +1,4 @@
+# Auto-detect text files, ensure they use LF.
+* text=auto eol=lf
+
 yarn.lock -diff
