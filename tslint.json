@@ -38,10 +38,10 @@
       true,
       100
     ],
-    "no-string-literal": false,
+    "no-string-literal": true,
     "no-use-before-declare": true,
     "object-literal-sort-keys": false,
-    "ordered-imports": false,
+    "ordered-imports": [false],
     "quotemark": [
       true,
       "single",
