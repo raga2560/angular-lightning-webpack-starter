@@ -8,8 +8,8 @@ addons:
       - google-chrome-stable
 language: node_js
 node_js:
-  - "6"
   - "node"
+  - "7"
 matrix:
   fast_finish: true
 before_install:
@@ -25,3 +25,4 @@ script:
 cache:
   directories:
     - node_modules
+  yarn: true
