@@ -1,9 +1,10 @@
 {
   "extends": [
-    "tslint:recommended"
+    "tslint:latest"
   ],
   "rulesDirectory": [
-    "node_modules/codelyzer"
+    "node_modules/codelyzer",
+    "node_modules/tslint-consistent-codestyle/rules"
   ],
   "rules": {
     // Custom
@@ -53,6 +54,13 @@
       "allow-pascal-case",
       "ban-keywords",
       "check-format"
-    ]
+    ],
+    "no-collapsible-if": true,
+    "no-return-undefined": true,
+    "no-static-this": true,
+    "no-unnecessary-else": true,
+    "no-var-before-return": true,
+    "object-shorthand-properties-first": true,
+    "prefer-while": true
   }
 }
