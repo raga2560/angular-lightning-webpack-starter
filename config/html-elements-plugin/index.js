@@ -36,7 +36,7 @@ const RE_ENDS_WITH_BS = /\/$/;
  * // <link rel="manifest" href="/assets/manifest.json">
  * @param tagName The name of the tag
  * @param attrMap A Map of attribute names (keys) and their values.
- * @param publicPath a path to add to eh start of static asset url
+ * @param publicPath a path to add to the start of static asset url
  * @returns {string}
  */
 function createTag(tagName, attrMap, publicPath) {
@@ -53,7 +53,7 @@ function createTag(tagName, attrMap, publicPath) {
       var value = attrMap[name];
 
       if (publicPath) {
-        // check if we have explicit instruction, use it if so (e.g: =herf: false)
+        // check if we have explicit instruction, use it if so (e.g: =href: false)
         // if no instruction, use public path if it's href attribute.
         const usePublicPath = attrMap.hasOwnProperty('=' + name) ? !!attrMap['=' + name] : name === 'href';
 

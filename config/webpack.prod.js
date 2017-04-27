@@ -91,7 +91,7 @@ module.exports = function (env) {
       rules: [
 
         /*
-         * Extract CSS files from .src/styles directory to external CSS file
+         * Extract CSS files from src/styles directory to external CSS file
          */
         {
           test: /\.css$/,
@@ -103,7 +103,7 @@ module.exports = function (env) {
         },
 
         /*
-         * Extract and compile SCSS files from .src/styles directory to external CSS file
+         * Extract and compile SCSS files from src/styles directory to external CSS file
          */
         {
           test: /\.scss$/,

@@ -112,38 +112,47 @@ module.exports = function (options) {
         },
 
         /**
-         * Raw loader support for *.css files
+         * to string and css loader support for *.scss files
          * Returns file content as string
-         *
-         * See: https://github.com/webpack/raw-loader
          */
         {
           test: /\.css$/,
-          loader: ['to-string-loader', 'css-loader'],
-          exclude: [helpers.root('src/index.html')]
+          loader: ['to-string-loader', 'css-loader']
         },
 
         /**
-         * Raw loader support for *.scss files
-         *
-         * See: https://github.com/webpack/raw-loader
+         * to string and sass loader support for *.scss files
+         * Returns compiled css content as string
          */
         {
             test: /\.scss$/,
-            loader: ['raw-loader', 'sass-loader'],
-            exclude: [helpers.root('src/index.html')]
+            loader: ['to-string-loader', 'css-loader', 'sass-loader']
         },
 
         /**
-         * Raw loader support for *.html
+         * HTML loader support for *.html
          * Returns file content as string
          *
-         * See: https://github.com/webpack/raw-loader
+         * See: https://github.com/webpack/html-loader
          */
         {
           test: /\.html$/,
-          loader: 'raw-loader',
+          loader: 'html-loader',
           exclude: [helpers.root('src/index.html')]
+        },
+
+        /**
+         * URL loader for supporting images, fonts, etc. in CSS and HTML files.
+         * Falls back to file-loader if size is over the given limit.
+         */
+        {
+          test: /\.(jpg|png|gif|svg|eot|woff2?|ttf)([\?]?.*)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 15000
+            }
+          }
         },
 
         /**

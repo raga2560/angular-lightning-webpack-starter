@@ -158,31 +158,31 @@ module.exports = function (options) {
           exclude: [helpers.root('src', 'styles')]
         },
 
-        /* Raw loader support for *.html
+        /**
+         * HTML loader support for *.html
          * Returns file content as string
          *
-         * See: https://github.com/webpack/raw-loader
+         * See: https://github.com/webpack/html-loader
          */
         {
           test: /\.html$/,
-          use: 'raw-loader',
+          use: 'html-loader',
           exclude: [helpers.root('src/index.html')]
         },
 
-        /* 
-         * File loader for supporting images, for example, in CSS files.
+        /**
+         * URL loader for supporting images, fonts, etc. in CSS and HTML files.
+         * Falls back to file-loader if size is over the given limit.
          */
         {
-          test: /\.(jpg|png|gif)$/,
-          use: 'file-loader'
+          test: /\.(jpg|png|gif|svg|eot|woff2?|ttf)([\?]?.*)$/,
+          use: {
+            loader: 'url-loader',
+            options: {
+              limit: 15000
+            }
+          }
         },
-
-        /* File loader for supporting fonts, for example, in CSS files.
-        */
-        { 
-          test: /\.(eot|woff2?|svg|ttf)([\?]?.*)$/,
-          use: 'file-loader'
-        }
 
       ],
 

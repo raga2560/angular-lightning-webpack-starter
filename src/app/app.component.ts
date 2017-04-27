@@ -55,11 +55,15 @@ import { AppState } from './app.service';
           <img [src]="angularclassLogo" width="25%">
         </a>
       </div>
+      <div>
+        <img [src]="favicon">
+      </div>
     </footer>
   `
 })
 export class AppComponent implements OnInit {
-  public angularclassLogo = 'assets/img/angularclass-avatar.png';
+  public angularclassLogo = require('../assets/img/angularclass-avatar.png');
+  public favicon = require('../assets/icon/favicon-16x16.png');
   public name = 'Angular 2 Webpack Starter';
   public url = 'https://twitter.com/AngularClass';
 
