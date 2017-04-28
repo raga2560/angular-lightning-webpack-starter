@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/jkreileder/angular-lightning-webpack-starter.svg?branch=master)](https://travis-ci.org/jkreileder/angular-lightning-webpack-starter)
 [![GitHub version](https://badge.fury.io/gh/jkreileder%2Fangular-lightning-webpack-starter.svg)](https://badge.fury.io/gh/jkreileder%2Fangular-lightning-webpack-starter)
 [![Dependency Status](https://david-dm.org/jkreileder/angular-lightning-webpack-starter.svg)](https://david-dm.org/jkreileder/angular-lightning-webpack-starter)
+[![Dev Dependency Status](https://david-dm.org/jkreileder/angular-lightning-webpack-starter/dev-status.svg)](https://david-dm.org/jkreileder/angular-lightning-webpack-starter?type=dev)
 [![Greenkeeper badge](https://badges.greenkeeper.io/jkreileder/angular-lightning-webpack-starter.svg)](https://greenkeeper.io/)
 
 # Angular Lightning Webpack Starter
