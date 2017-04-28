@@ -20,8 +20,8 @@ echo "(Creat/updat)ing lockfile"
 yarn
 
 echo "Commit and push yarn.lock"
-git config --global user.email "support@greenkeeper.io"
-git config --global user.name "greenkeeperio-bot"
+git config --global user.email "greenkeeper[bot]@users.noreply.github.com"
+git config --global user.name "greenkeeper[bot]"
 git config --global push.default simple
 
 git add yarn.lock
