@@ -22,6 +22,8 @@ before_script:
   - sleep 3
 script:
   - npm run ci:travis
+after_success:
+  - bash travis-greenkeeper-yarn.sh
 cache:
   directories:
     - node_modules
