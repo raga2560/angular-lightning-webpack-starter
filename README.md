@@ -6,9 +6,6 @@
 
 # Angular Lightning Webpack Starter
 
-
-Lightning Design System
-
 > An starter kit featuring [Angular 4](https://angular.io),  [Native Angular components & directives for the Salesforce Lightning Design System ](http://ng-lightning.github.io/ng-lightning/) (in progress), [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [Router](https://angular.io/docs/ts/latest/guide/router.html), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
 [Http](https://angular.io/docs/ts/latest/guide/server-communication.html),
 [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter),
