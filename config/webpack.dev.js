@@ -83,7 +83,7 @@ module.exports = function (options) {
        *
        * See: http://webpack.github.io/docs/configuration.html#output-chunkfilename
        */
-      chunkFilename: '[id].chunk.js',
+      chunkFilename: '[name].chunk.js',
 
       library: 'ac_[name]',
       libraryTarget: 'var',
