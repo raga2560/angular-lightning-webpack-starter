@@ -180,7 +180,8 @@ module.exports = function (options) {
           use: {
             loader: 'url-loader',
             options: {
-              limit: 15000
+              limit: 15000,
+              name: 'wp-assets/[name].[hash].[ext]',
             }
           }
         },
