@@ -8,7 +8,7 @@ describe('App', () => {
 
   it('should have a title', () => {
     const subject = browser.getTitle();
-    const result  = 'Angular2 Webpack Starter by @gdi2290 from @AngularClass';
+    const result  = 'Sample App';
     expect<any>(subject).toEqual(result);
   });
 
