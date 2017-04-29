@@ -1,37 +1,24 @@
 <div>
-  <h1 x-large class="sample-content">Your Content Here</h1>
+  <h1 x-large class="slds-text-title">Your Content Here</h1>
 
-  <hr>
-
-  <div>
+  <div class="slds-m-top--small">
     For hot module reloading run
-    <pre>npm run start:hmr</pre>
+    <pre class="slds-box slds-box--x-small slds-text-body--x-small">npm run start:hmr</pre>
   </div>
 
-  <hr>
-
-  <div>
-    <h4>Local State</h4>
+  <div class="slds-m-top--medium">
+    <h3 class="slds-section-title--divider">Local State</h3>
 
     <form (ngSubmit)="submitState(localState.value)" autocomplete="off">
 
-      <input
-        [value]="localState.value"
-        (input)="localState.value = $event.target.value"
-        placeholder="Submit Local State to App State"
-        autofocus>
+      <ngl-form-element label="Local state" class="slds-m-top--small">
+        <input nglFormControl [value]="localState.value" (input)="localState.value = $event.target.value" placeholder="Submit Local State to App State"
+          autofocus>
+      </ngl-form-element>
 
-      <button>Submit Value</button>
+      <button nglButton="neutral" class="slds-m-top--small">Submit Value</button>
     </form>
-    <!--
-        <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-        Rather than wiring up two-way data-binding ourselves with [value] and (input)
-        we can use Angular's [(ngModel)] syntax
-        <input type="text" name="textInput" [(ngModel)]="localState.value" autofocus>
-      -->
 
-    <pre>this.localState = {{ localState | json }}</pre>
-
+    <pre class="slds-box slds-box--x-small slds-m-top--medium slds-text-body--small">this.localState = {{ localState | json }}</pre>
   </div>
-
 </div>

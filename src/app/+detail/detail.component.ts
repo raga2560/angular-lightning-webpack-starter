@@ -13,7 +13,7 @@ console.log('`Detail` component loaded asynchronously');
 @Component({
   selector: 'detail',
   template: `
-    <h1>Hello from Detail</h1>
+    <h1 class="slds-text-heading--medium">Hello from Detail</h1>
     <span>
       <a [routerLink]=" ['./child-detail'] ">
         Child Detail

@@ -9,17 +9,14 @@ import { ActivatedRoute } from '@angular/router';
   styles: [`
   `],
   template: `
-    <h1>About</h1>
-    <div>
+    <h1 class="slds-text-heading--medium">About</h1>
+    <div class="slds-m-top--small">
       For hot module reloading run
-      <pre>npm run start:hmr</pre>
+      <pre class="slds-box slds-box--x-small slds-text-body--small
+           slds-m-top--xx-small">npm run start:hmr</pre>
     </div>
-    <div>
-      <h3>
-        patrick@AngularClass.com
-      </h3>
-    </div>
-    <pre>this.localState = {{ localState | json }}</pre>
+    <pre class="slds-box slds-box--x-small slds-text-body--small
+         slds-m-top--medium">this.localState = {{ localState | json }}</pre>
   `
 })
 export class AboutComponent implements OnInit {
@@ -27,7 +24,7 @@ export class AboutComponent implements OnInit {
   public localState: any;
   constructor(
     public route: ActivatedRoute
-  ) {}
+  ) { }
 
   public ngOnInit() {
     this.route
