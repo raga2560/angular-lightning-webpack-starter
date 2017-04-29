@@ -17,10 +17,14 @@ Differences to [Angular2 Webpack Starter](https://github.com/AngularClass/angula
   * Use html-loader instead of raw-loader for HTML files, so url/file-loader works for referenced resources
   * Use url-loader instead of file-loader for smaller files
   * Extract manifest and inline it in index.html to get working caching/cache busting
+* Removed unnecessary parts:
+  * webpack github deploy
+  * Web App manifest, etc. (cache busting wasn't properly implemented for this anyway)
+  * Injection of head elements into index.html (cache busting wasn't properly implemented for this anyway)
+* Copying of assets folder to dist has been removed -- everything should be copied there implicitly by webpack
 * Provide yarn.lock
 
 ### Quick start
-**Make sure you have Node version >= 6.0 and NPM >= 3**
 > Clone/Download the repo then edit `app.component.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
 
 ```bash
@@ -60,7 +64,7 @@ angular-lightning-webpack-starter
  ├──src/                           * our source files that will be compiled to javascript
  │   ├──main.browser.ts            * our entry file for our browser environment
  │   │
- │   ├──index.html                 * Index.html: where we generate our index page
+ │   ├──index.html                 * index.html: where we generate our index page
  │   │
  │   ├──polyfills.ts               * our polyfills file
  │   │
@@ -69,12 +73,9 @@ angular-lightning-webpack-starter
  │   │   ├──app.e2e.ts             * a simple end-to-end test for /
  │   │   └──app.component.ts       * a simple version of our App component components
  │   │
- │   └──assets/                    * static assets are served here
- │       ├──icon/                  * our list of icons from www.favicon-generator.org
- │       ├──service-worker.js      * ignore this. Web App service worker that's not complete yet
- │       ├──robots.txt             * for search engines to crawl your website
- │       └──humans.txt             * for humans to know who the developers are
- │
+ │   └──assets/                    * your assets
+ │       ├──[...]
+ │       └──service-worker.js      * ignore this. Web App service worker that's not complete yet │
  │
  ├──tslint.json                    * typescript lint config
  ├──typedoc.json                   * typescript documentation generator
