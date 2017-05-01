@@ -30,6 +30,7 @@ import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
 import { NglModule } from 'ng-lightning/ng-lightning';
+import { NglIconSvg } from 'ng-lightning/icons/svg';
 
 import '../styles/styles.scss';
 import '../styles/headings.css';
@@ -45,6 +46,24 @@ interface StoreType {
   restoreInputValues: () => void;
   disposeOldHosts: () => void;
 }
+
+// tslint:disable:max-line-length
+NglIconSvg.prototype.iconPath = function() {
+  switch (this.category) {
+    case 'action':
+      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/action-sprite/svg/symbols.svg')}#${this.icon}`;
+    case 'custom':
+      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/custom-sprite/svg/symbols.svg')}#${this.icon}`;
+    case 'doctype':
+      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/doctype-sprite/svg/symbols.svg')}#${this.icon}`;
+    case 'standard':
+      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/standard-sprite/svg/symbols.svg')}#${this.icon}`;
+    case 'utility':
+    default:
+      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg')}#${this.icon}`;
+  }
+};
+// tslint:enable:max-line-length
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
