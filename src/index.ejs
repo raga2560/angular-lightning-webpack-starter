@@ -36,9 +36,15 @@
 
 <body>
 
-  <app>
-    Loading...
-  </app>
+<app>
+  <div class="slds-spinner_container">
+    <div role="status" class="slds-spinner slds-spinner--large">
+      <span class="slds-assistive-text">Loading</span>
+      <div class="slds-spinner__dot-a"></div>
+      <div class="slds-spinner__dot-b"></div>
+    </div>
+  </div>
+</app>
 
 <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true && htmlWebpackPlugin.options.metadata.FORCECOM !== true) { %>
   <!-- Webpack Dev Server reload -->
