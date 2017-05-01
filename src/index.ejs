@@ -1,4 +1,18 @@
+<% if (htmlWebpackPlugin.options.metadata.FORCECOM === true) { %>
+<apex:page apiVersion="39.0"
+           cache="false"
+           docType="html-5.0"
+           applyHtmlTag="false"
+           applyBodyTag="false"
+           standardStylesheets="false"
+           showHeader="false"
+           sidebar="false"
+           standardController="Case"
+           extensions="ControllerExtension">
+<% } else { %>
 <!DOCTYPE html>
+<% } %>
+
 <html>
 <head>
   <meta charset="utf-8">
@@ -10,7 +24,11 @@
   <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
 
   <!-- base url -->
+<% if (htmlWebpackPlugin.options.metadata.FORCECOM === true) { %>
+  <base href="{!URLFOR($Resource.SampleApp, '')}">
+<% } else { %>
   <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
+<% } %>
 
   <%= htmlWebpackPlugin.files.webpackManifest %>
 
@@ -22,11 +40,14 @@
     Loading...
   </app>
 
-  <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+<% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true && htmlWebpackPlugin.options.metadata.FORCECOM !== true) { %>
   <!-- Webpack Dev Server reload -->
   <script src="/webpack-dev-server.js"></script>
-  <% } %>
-
+<% } %>
 
 </body>
 </html>
+
+<% if (htmlWebpackPlugin.options.metadata.FORCECOM === true) { %>
+</apex:page>
+<% } %>

@@ -27,7 +27,8 @@ const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
   title: 'Sample App',
   baseUrl: '/',
-  isDevServer: helpers.isWebpackDevServer()
+  isDevServer: helpers.isWebpackDevServer(),
+  FORCECOM: helpers.hasNpmFlag('forcecom'),
 };
 
 /*
