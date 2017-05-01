@@ -148,15 +148,32 @@ module.exports = function (options) {
         /**
          * URL loader for supporting images, fonts, etc. in CSS and HTML files.
          * Falls back to file-loader if size is over the given limit.
+         * Excluding Salesforce Lightning Design System SVG sprites, inlining doesn't work for these.
          */
         {
           test: /\.(jpg|png|gif|svg|eot|woff2?|ttf)([\?]?.*)$/,
           use: {
             loader: 'url-loader',
             options: {
-              limit: 15000
+              limit: 15000,
+              name: 'assets/[name].[hash].[ext]',
             }
-          }
+          },
+          exclude: [/@salesforce-ux.design-system.assets.icons.[a-z]+-sprite.svg.symbols\.svg$/],
+        },
+
+        /**
+         * File loader for Salesforce Lightning Design System SVG sprites.
+         * Doesn't work with inlining.
+         */
+        {
+          test: /@salesforce-ux.design-system.assets.icons.[a-z]+-sprite.svg.symbols\.svg$/,
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/[name].[hash].[ext]',
+            }
+          },
         },
 
         /**
