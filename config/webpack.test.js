@@ -138,7 +138,6 @@ module.exports = function (options) {
         {
           test: /\.html$/,
           loader: 'html-loader',
-          exclude: [helpers.root('src/index.html')]
         },
 
         /**

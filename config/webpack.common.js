@@ -165,7 +165,6 @@ module.exports = function (options) {
         {
           test: /\.html$/,
           use: 'html-loader',
-          exclude: [helpers.root('src/index.html')]
         },
 
         /**
@@ -258,7 +257,7 @@ module.exports = function (options) {
        * See: https://github.com/ampedandwired/html-webpack-plugin
        */
       new HtmlWebpackPlugin({
-        template: 'src/index.html',
+        template: 'src/index.ejs',
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
@@ -313,7 +312,7 @@ module.exports = function (options) {
 
       /**
        * Plugin: InlineManifestWebpackPlugin
-       * Inline Webpack's manifest.js in index.html
+       * Inline Webpack's manifest.js in index.ejs
        *
        * https://github.com/szrenwei/inline-manifest-webpack-plugin
        */

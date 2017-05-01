@@ -64,7 +64,7 @@ angular-lightning-webpack-starter
  ├──src/                           * our source files that will be compiled to javascript
  │   ├──main.browser.ts            * our entry file for our browser environment
  │   │
- │   ├──index.html                 * index.html: where we generate our index page
+ │   ├──index.js                   * Template for index.html: where we generate our index page
  │   │
  │   ├──polyfills.ts               * our polyfills file
  │   │
