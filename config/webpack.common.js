@@ -165,7 +165,12 @@ module.exports = function (options) {
          */
         {
           test: /\.html$/,
-          use: 'html-loader',
+          use: {
+            loader: 'html-loader',
+            options: {
+              attrs: ['img:src', 'ngl-avatar:src'],
+            },
+          },
         },
 
         /**
