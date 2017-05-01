@@ -6,13 +6,14 @@
 
 # Angular Lightning Webpack Starter
 
-> An starter kit featuring [Angular 4](https://angular.io),  [Native Angular components & directives for the Salesforce Lightning Design System ](http://ng-lightning.github.io/ng-lightning/) (in progress), [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [Router](https://angular.io/docs/ts/latest/guide/router.html), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
+> A starter kit featuring [Angular 4](https://angular.io),  [Native Angular components & directives for the Salesforce Lightning Design System ](http://ng-lightning.github.io/ng-lightning/) (in progress), [Ahead of Time Compile](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html), [Router](https://angular.io/docs/ts/latest/guide/router.html), [Forms](https://angular.io/docs/ts/latest/guide/forms.html),
 [Http](https://angular.io/docs/ts/latest/guide/server-communication.html),
 [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter),
 [Tests](https://angular.io/docs/ts/latest/guide/testing.html), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [TypeScript](http://www.typescriptlang.org/), [@types](https://www.npmjs.com/~types), [TsLint](http://palantir.github.io/tslint/), [Codelyzer](https://github.com/mgechev/codelyzer), [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), and [Webpack 2](http://webpack.github.io/).
 
 Differences to [Angular2 Webpack Starter](https://github.com/AngularClass/angular2-webpack-starter) from which this repository was forked:
-* In progress: Salesforce sample app and deployment
+* In progress: Salesforce deployment
+* ng-lightning / Salesforce Lightnin Design System based sample app
 * Modified webpack generation:
   * Use html-loader instead of raw-loader for HTML files, so url/file-loader works for referenced resources
   * Use url-loader instead of file-loader for smaller files
