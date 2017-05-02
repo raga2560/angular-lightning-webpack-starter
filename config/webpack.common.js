@@ -31,6 +31,10 @@ const METADATA = {
   FORCECOM: helpers.hasNpmFlag('forcecom'),
 };
 
+function getEntry(appName) {
+  return `./src/apps/${appName}.browser.${AOT ? 'aot.' : ''}ts`;
+}
+
 /*
  * Webpack configuration
  *
@@ -51,16 +55,14 @@ module.exports = function (options) {
 
     /*
      * The entry point for the bundle
-     * Our Angular.js app
+     * Our two Angular apps: main + sidebar
      *
      * See: http://webpack.github.io/docs/configuration.html#entry
      */
     entry: {
-
-      'polyfills': './src/polyfills.browser.ts',
-      'main':      AOT ? './src/main.browser.aot.ts' :
-                  './src/main.browser.ts'
-
+      polyfills: './src/polyfills.browser.ts',
+      main: getEntry('main'),
+      sidebar: getEntry('sidebar'),
     },
 
     /*
@@ -239,12 +241,22 @@ module.exports = function (options) {
       // This enables tree shaking of the vendor modules
       new CommonsChunkPlugin({
         name: 'vendor',
-        chunks: ['main'],
-        minChunks: module => /node_modules/.test(module.resource)
+        chunks: ['main', 'sidebar'],
+        minChunks: module => /node_modules/.test(module.resource),
+      }),
+      new CommonsChunkPlugin({
+        name: 'common',
+        chunks: ['main', 'sidebar'],
+        /**
+         * If you add additional pages and corresponding chunks, either:
+         * - leave this at 2, to put everything used in 2 pages into common
+         * - or set it to the number of pages to only put things used in all pages into common
+         */
+        minChunks: 2,
       }),
       // Specify the correct order the scripts will be injected in
       new CommonsChunkPlugin({
-        name: ['polyfills', 'vendor'].reverse()
+        name: ['polyfills', 'vendor', 'common'].reverse(),
       }),
       new CommonsChunkPlugin({
         name: ['manifest'],
@@ -277,10 +289,21 @@ module.exports = function (options) {
        */
       new HtmlWebpackPlugin({
         template: 'src/index.ejs',
+        chunks: ['polyfills', 'vendor', 'common', 'main'],
         title: METADATA.title,
         chunksSortMode: 'dependency',
         metadata: METADATA,
-        inject: 'head'
+        inject: 'head',
+        filename: 'main/index.html',
+      }),
+      new HtmlWebpackPlugin({
+        template: 'src/index.ejs',
+        chunks: ['polyfills', 'vendor', 'common', 'sidebar'],
+        title: METADATA.title,
+        chunksSortMode: 'dependency',
+        metadata: METADATA,
+        inject: 'head',
+        filename: 'sidebar/index.html',
       }),
 
       /*

@@ -26,14 +26,14 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
-import { NoContentComponent } from './no-content';
 import { XLargeDirective } from './home/x-large';
 
 import { NglModule } from 'ng-lightning/ng-lightning';
-import { NglIconSvg } from 'ng-lightning/icons/svg';
 
-import '../styles/styles.scss';
-import '../styles/headings.css';
+import { SharedModule } from '../shared';
+
+import '../../styles/styles.scss';
+import '../../styles/headings.css';
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -47,24 +47,6 @@ interface StoreType {
   disposeOldHosts: () => void;
 }
 
-// tslint:disable:max-line-length
-NglIconSvg.prototype.iconPath = function() {
-  switch (this.category) {
-    case 'action':
-      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/action-sprite/svg/symbols.svg')}#${this.icon}`;
-    case 'custom':
-      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/custom-sprite/svg/symbols.svg')}#${this.icon}`;
-    case 'doctype':
-      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/doctype-sprite/svg/symbols.svg')}#${this.icon}`;
-    case 'standard':
-      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/standard-sprite/svg/symbols.svg')}#${this.icon}`;
-    case 'utility':
-    default:
-      return `${require('../../node_modules/@salesforce-ux/design-system/assets/icons/utility-sprite/svg/symbols.svg')}#${this.icon}`;
-  }
-};
-// tslint:enable:max-line-length
-
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
  */
@@ -74,7 +56,6 @@ NglIconSvg.prototype.iconPath = function() {
     AppComponent,
     AboutComponent,
     HomeComponent,
-    NoContentComponent,
     XLargeDirective
   ],
   imports: [ // import Angular's modules
@@ -82,6 +63,7 @@ NglIconSvg.prototype.iconPath = function() {
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    SharedModule,
     NglModule.forRoot(),
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection

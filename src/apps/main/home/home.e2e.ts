@@ -1,10 +1,10 @@
 import { browser, by, element } from 'protractor';
 
-describe('App', () => {
+describe('Main App', () => {
 
   beforeEach(() => {
     // change hash depending on router LocationStrategy
-    browser.get('/#/home');
+    browser.get('/main/#/home');
   });
 
   it('should have a title', () => {

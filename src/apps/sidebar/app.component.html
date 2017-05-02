@@ -35,16 +35,6 @@
         </a>
       </li>
       <li class="slds-context-bar__item" routerLinkActive="slds-is-active" [routerLinkActiveOptions]="{exact: true}">
-        <a [routerLink]=" ['./detail'] " class="slds-context-bar__label-action" title="Detail">
-          <span class="slds-truncate">Detail</span>
-        </a>
-      </li>
-      <li class="slds-context-bar__item" routerLinkActive="slds-is-active" [routerLinkActiveOptions]="{exact: true}">
-        <a [routerLink]=" ['./barrel'] " class="slds-context-bar__label-action" title="Barrel">
-          <span class="slds-truncate">Barrel</span>
-        </a>
-      </li>
-      <li class="slds-context-bar__item" routerLinkActive="slds-is-active" [routerLinkActiveOptions]="{exact: true}">
         <a [routerLink]=" ['./about'] " class="slds-context-bar__label-action" title="About">
           <span class="slds-truncate">About</span>
         </a>
@@ -58,11 +48,8 @@
     <router-outlet></router-outlet>
   </main>
 
-  <div class="slds-container--medium">
-    <pre class="slds-box slds-box--x-small slds-text-body--small slds-m-top--xx-small">this.appState.state = {{ appState.state | json }}</pre>
-  </div>
-  <footer>
-    <ngl-avatar src="../../node_modules/@salesforce-ux/design-system/assets/images/logo-noname.svg" alt="avatar 1"></ngl-avatar>
+  <footer class="slds-m-top--medium">
+    <ngl-avatar src="../../../node_modules/@salesforce-ux/design-system/assets/images/logo-noname.svg" alt="avatar 1"></ngl-avatar>
     <span>angular-lightning-webpack-starter by <a [href]="url">Jürgen Kreileder</a></span>
   </footer>
 </div>

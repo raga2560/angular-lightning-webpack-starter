@@ -1,9 +1,9 @@
 import { browser, by, element } from 'protractor';
 
-describe('App', () => {
+describe('Main App', () => {
 
   beforeEach(() => {
-    browser.get('/');
+    browser.get('/main/');
   });
 
   it('should have a title', () => {

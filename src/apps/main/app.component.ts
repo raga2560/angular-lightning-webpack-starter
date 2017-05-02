@@ -21,7 +21,7 @@ import { AppState } from './app.service';
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  public name = 'Sample App';
+  public name = 'Main App';
   public url = 'https://blackdown.de/';
 
   constructor(

@@ -10,7 +10,7 @@ import {
 import { AppComponent } from './app.component';
 import { AppState } from './app.service';
 
-describe(`App`, () => {
+describe(`Sidebar App`, () => {
   let comp: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
 
@@ -39,7 +39,7 @@ describe(`App`, () => {
 
   it(`should be @AngularClass`, () => {
     expect(comp.url).toEqual('https://blackdown.de/');
-    expect(comp.name).toEqual('Sample App');
+    expect(comp.name).toEqual('Sidebar App');
   });
 
   it('should log ngOnInit', () => {
