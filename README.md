@@ -11,8 +11,9 @@
 [Services](https://gist.github.com/gdi2290/634101fec1671ee12b3e#_follow_@AngularClass_on_twitter),
 [Tests](https://angular.io/docs/ts/latest/guide/testing.html), [E2E](https://angular.github.io/protractor/#/faq#what-s-the-difference-between-karma-and-protractor-when-do-i-use-which-)), [Karma](https://karma-runner.github.io/), [Protractor](https://angular.github.io/protractor/), [Jasmine](https://github.com/jasmine/jasmine), [Istanbul](https://github.com/gotwarlost/istanbul), [TypeScript](http://www.typescriptlang.org/), [@types](https://www.npmjs.com/~types), [TsLint](http://palantir.github.io/tslint/), [Codelyzer](https://github.com/mgechev/codelyzer), [Hot Module Replacement](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html), and [Webpack 2](http://webpack.github.io/).
 
-Differences to [Angular2 Webpack Starter](https://github.com/AngularClass/angular2-webpack-starter) from which this repository was forked:
+Differences to [Angular Starter](https://github.com/AngularClass/angular-starter) from which this repository was forked:
 * In progress: Salesforce deployment
+* Two entry points/apps
 * ng-lightning / Salesforce Lightnin Design System based sample app
 * Modified webpack generation:
   * Use html-loader instead of raw-loader for HTML files, so url/file-loader works for referenced resources
@@ -26,8 +27,6 @@ Differences to [Angular2 Webpack Starter](https://github.com/AngularClass/angula
 * Provide yarn.lock
 
 ### Quick start
-> Clone/Download the repo then edit `app.component.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
-
 ```bash
 # clone our repo
 # --depth 1 removes all but one .git commit history:
@@ -47,46 +46,50 @@ npm start
 # use Hot Module Replacement
 npm run server:dev:hmr
 ```
-go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your browser
+go to [http://localhost:3000/main](http://localhost:3000/sidebar/) or [http://localhost:3000/sidebar/](http://localhost:3000/sidebar/) in your browser
 
 ## File Structure
 We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
 ```
 angular-lightning-webpack-starter
- ├──config/                        * our configuration
- │   ├──helpers.js                 * helper functions for our configuration files
- │   ├──spec-bundle.js             * ignore this magic that sets up our Angular testing environment
- │   ├──karma.conf.js              * karma config for our unit tests
- │   ├──protractor.conf.js         * protractor config for our end-to-end tests
- │   ├──webpack.dev.js             * our development webpack config
- │   ├──webpack.prod.js            * our production webpack config
- │   └──webpack.test.js            * our testing webpack config
+ ├──config/                            * our configuration
+ │   ├──helpers.js                     * helper functions for our configuration files
+ │   ├──spec-bundle.js                 * ignore this magic that sets up our Angular testing environment
+ │   ├──karma.conf.js                  * karma config for our unit tests
+ │   ├──protractor.conf.js             * protractor config for our end-to-end tests
+ │   ├──webpack.dev.js                 * our development webpack config
+ │   ├──webpack.prod.js                * our production webpack config
+ │   └──webpack.test.js                * our testing webpack config
  │
- ├──src/                           * our source files that will be compiled to javascript
- │   ├──main.browser.ts            * our entry file for our browser environment
+ ├──src/                               * our source files that will be compiled to javascript
  │   │
- │   ├──index.js                   * Template for index.html: where we generate our index page
+ │   ├──index.js                       * Template for index.html: where we generate our index page
  │   │
- │   ├──polyfills.ts               * our polyfills file
+ │   ├──polyfills.ts                   * our polyfills file
  │   │
- │   ├──app/                       * WebApp: folder
- │   │   ├──app.component.spec.ts  * a simple test of components in app.component.ts
- │   │   ├──app.e2e.ts             * a simple end-to-end test for /
- │   │   └──app.component.ts       * a simple version of our App component components
+ │   ├──apps/                          * WebApp: folder
+ │   │   ├──main.browser.ts            * our entry file for the first application
+ │   │   ├──main                       * First application: main
+ │   │   │   ├──app.component.spec.ts  * a simple test of components in app.component.ts
+ │   │   │   ├──app.e2e.ts             * a simple end-to-end test for /
+ │   │   │   └──app.component.ts       * a simple version of our App component components
+ │   │   ├──sidebar.browser.ts         * our entry file for the second application
+ │   │   └──sidebar                    * Second application: sidebar
+ │   │       ├──app.component.spec.ts  * a simple test of components in app.component.ts
+ │   │       ├──app.e2e.ts             * a simple end-to-end test for /
+ │   │       └──app.component.ts       * a simple version of our App component components
  │   │
- │   └──assets/                    * your assets
+ │   └──assets/                        * your assets
  │       ├──[...]
- │       └──service-worker.js      * ignore this. Web App service worker that's not complete yet │
+ │       └──service-worker.js          * ignore this. Web App service worker that's not complete yet │
  │
- ├──tslint.json                    * typescript lint config
- ├──typedoc.json                   * typescript documentation generator
- ├──tsconfig.json                  * typescript config used outside webpack
- ├──tsconfig.webpack.json          * config that webpack uses for typescript
- ├──package.json                   * what npm/yarn uses to manage it's dependencies
- ├──webpack.config.js              * webpack main configuration file
- └──yarn.lock                      * yarn's locked dependencies
-
-
+ ├──tslint.json                        * typescript lint config
+ ├──typedoc.json                       * typescript documentation generator
+ ├──tsconfig.json                      * typescript config used outside webpack
+ ├──tsconfig.webpack.json              * config that webpack uses for typescript
+ ├──package.json                       * what npm/yarn uses to manage it's dependencies
+ ├──webpack.config.js                  * webpack main configuration file
+ └──yarn.lock                          * yarn's locked dependencies
 ```
 ___
 
