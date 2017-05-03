@@ -46,7 +46,7 @@ npm start
 # use Hot Module Replacement
 npm run server:dev:hmr
 ```
-go to [http://localhost:3000/main](http://localhost:3000/sidebar/) or [http://localhost:3000/sidebar/](http://localhost:3000/sidebar/) in your browser
+go to [http://localhost:3000/main/](http://localhost:3000/main/) or [http://localhost:3000/sidebar/](http://localhost:3000/sidebar/) in your browser
 
 ## File Structure
 We use the component approach in our starter. This is the new standard for developing Angular apps and a great way to ensure maintainable code by encapsulation of our behavior logic. A component is basically a self contained app usually in a single file or a folder with each concern as a file: style, template, specs, e2e, and component class. Here's how it looks:
@@ -74,11 +74,12 @@ angular-lightning-webpack-starter
  │   │   │   ├──app.e2e.ts             * a simple end-to-end test for /
  │   │   │   └──app.component.ts       * a simple version of our App component components
  │   │   ├──sidebar.browser.ts         * our entry file for the second application
- │   │   └──sidebar                    * Second application: sidebar
- │   │       ├──app.component.spec.ts  * a simple test of components in app.component.ts
- │   │       ├──app.e2e.ts             * a simple end-to-end test for /
- │   │       └──app.component.ts       * a simple version of our App component components
- │   │
+ │   │   ├──sidebar                    * Second application: sidebar
+ │   │   │   ├──app.component.spec.ts  * a simple test of components in app.component.ts
+ │   │   │   ├──app.e2e.ts             * a simple end-to-end test for /
+ │   │   │   └──app.component.ts       * a simple version of our App component components
+ │   │   └──shared                     * Code used in more than one app
+ │   │       └──[...]
  │   └──assets/                        * your assets
  │       ├──[...]
  │       └──service-worker.js          * ignore this. Web App service worker that's not complete yet │
