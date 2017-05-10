@@ -2,7 +2,7 @@
 /* This file is for setting global styles  */
 @import 'variables';
 
-@import '../../node_modules/@salesforce-ux/design-system/scss/index';
+@import '~@salesforce-ux/design-system/scss/index';
 
 .content {
   padding: 1rem;
