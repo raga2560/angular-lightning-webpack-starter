@@ -3610,9 +3610,9 @@ ng-router-loader@^2.1.0:
     loader-utils "^0.2.16"
     recast "^0.11.20"
 
-ngc-webpack@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npmjs.org/ngc-webpack/-/ngc-webpack-2.0.0.tgz#ebd1f6937b7b81cbcd6d9d1bd1fa9001c6be145f"
+ngc-webpack@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/ngc-webpack/-/ngc-webpack-3.0.0.tgz#b7caf724e367c22c10f100c5b460f266a0189b63"
   dependencies:
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
