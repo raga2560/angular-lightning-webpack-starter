@@ -149,9 +149,9 @@
   dependencies:
     "@types/source-map" "*"
 
-"@types/webpack@^2.2.15":
-  version "2.2.15"
-  resolved "https://registry.npmjs.org/@types/webpack/-/webpack-2.2.15.tgz#4ad7e9b7a51cae736a1dc783f203610c884789ff"
+"@types/webpack@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/@types/webpack/-/webpack-3.0.0.tgz#2c5c383e0ba192340856f5e5cceb655cc195d0fa"
   dependencies:
     "@types/node" "*"
     "@types/tapable" "*"
