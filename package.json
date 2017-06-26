@@ -100,7 +100,7 @@
     "awesome-typescript-loader": "^3.1.2",
     "codelyzer": "^3.0.0",
     "css-loader": "^0.28.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.1.1",
     "eslint-config-airbnb": "^15.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^5.0.0",
