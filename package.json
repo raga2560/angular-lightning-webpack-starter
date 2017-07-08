@@ -86,7 +86,7 @@
     "zone.js": "^0.8.5"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "^4.0.3",
+    "@angular/compiler-cli": "^4.2.6",
     "@salesforce-ux/design-system": "^2.2.2",
     "@types/hammerjs": "^2.0.34",
     "@types/jasmine": "^2.5.45",
