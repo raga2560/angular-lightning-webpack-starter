@@ -79,9 +79,9 @@
   version "2.2.2"
   resolved "https://registry.npmjs.org/@salesforce-ux/design-system/-/design-system-2.2.2.tgz#acf3fc1f9588555f995a2fda2f2cf51ea965c527"
 
-"@types/fs-extra@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/@types/fs-extra/-/fs-extra-3.0.0.tgz#13e5566e4d780618ba52bd55e0dc713d7a687e59"
+"@types/fs-extra@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/@types/fs-extra/-/fs-extra-4.0.0.tgz#1dd742ad5c9bce308f7a52d02ebc01421bc9102f"
   dependencies:
     "@types/node" "*"
 
@@ -2144,9 +2144,9 @@ fs-access@^1.0.0:
   dependencies:
     null-check "^1.0.0"
 
-fs-extra@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/fs-extra/-/fs-extra-3.0.1.tgz#3794f378c58b342ea7dbbb23095109c4b3b62291"
+fs-extra@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/fs-extra/-/fs-extra-4.0.0.tgz#414fb4ca2d2170ba0014159d3a8aec3303418d9e"
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^3.0.0"
@@ -5554,18 +5554,18 @@ typedoc-default-themes@^0.5.0:
   version "0.5.0"
   resolved "https://registry.npmjs.org/typedoc-default-themes/-/typedoc-default-themes-0.5.0.tgz#6dc2433e78ed8bea8e887a3acde2f31785bd6227"
 
-typedoc@^0.7.0:
-  version "0.7.0"
-  resolved "https://registry.npmjs.org/typedoc/-/typedoc-0.7.0.tgz#daf2443203eb867be9adb63d3b7054a039a760cf"
+typedoc@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.npmjs.org/typedoc/-/typedoc-0.8.0.tgz#d7172bc6a29964f451b7609c005beadadefe2361"
   dependencies:
-    "@types/fs-extra" "^3.0.0"
+    "@types/fs-extra" "^4.0.0"
     "@types/handlebars" "^4.0.31"
     "@types/highlight.js" "^9.1.8"
     "@types/lodash" "^4.14.37"
     "@types/marked" "0.0.28"
     "@types/minimatch" "^2.0.29"
     "@types/shelljs" "^0.7.0"
-    fs-extra "^3.0.0"
+    fs-extra "^4.0.0"
     handlebars "^4.0.6"
     highlight.js "^9.0.0"
     lodash "^4.13.1"
@@ -5574,9 +5574,13 @@ typedoc@^0.7.0:
     progress "^2.0.0"
     shelljs "^0.7.0"
     typedoc-default-themes "^0.5.0"
-    typescript "2.3.2"
+    typescript "2.4.1"
 
-typescript@2.3.2, typescript@^2.3.0:
+typescript@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-2.4.1.tgz#c3ccb16ddaa0b2314de031e7e6fee89e5ba346bc"
+
+typescript@^2.3.0:
   version "2.3.2"
   resolved "https://registry.npmjs.org/typescript/-/typescript-2.3.2.tgz#f0f045e196f69a72f06b25fd3bd39d01c3ce9984"
 
