@@ -3597,9 +3597,9 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.npmjs.org/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
-ng-lightning@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.npmjs.org/ng-lightning/-/ng-lightning-1.3.0.tgz#4eb47aa756853357df1a892396cb966c6e337820"
+ng-lightning@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.npmjs.org/ng-lightning/-/ng-lightning-2.0.1.tgz#c95605ea3981cb443de27b91df4db3b26c63f866"
   dependencies:
     tether "^1.2.0"
 
