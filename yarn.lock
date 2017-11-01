@@ -2,9 +2,11 @@
 # yarn lockfile v1
 
 
-"@angular/animations@^4.0.3":
-  version "4.1.2"
-  resolved "https://registry.npmjs.org/@angular/animations/-/animations-4.1.2.tgz#3371596e736b7d240e200477d0dd8c5929352124"
+"@angular/animations@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/@angular/animations/-/animations-5.0.0.tgz#b5ad199c67f93f759544477effe6679e154991fb"
+  dependencies:
+    tslib "^1.7.1"
 
 "@angular/common@^4.0.3":
   version "4.1.2"
@@ -5483,6 +5485,10 @@ tsickle@^0.21.0:
 tslib@^1.6.0, tslib@^1.6.1:
   version "1.7.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.7.0.tgz#6e8366695f72961252b35167b0dd4fbeeafba491"
+
+tslib@^1.7.1:
+  version "1.8.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-1.8.0.tgz#dc604ebad64bcbf696d613da6c954aa0e7ea1eb6"
 
 tslint-consistent-codestyle@^1.2.0:
   version "1.2.0"
